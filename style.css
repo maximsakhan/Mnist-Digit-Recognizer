@@ -1,0 +1,149 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+#train {
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: rgb(245, 75, 2);
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    padding: 6px 0 6px 0;
+}
+
+.canvases {
+    display: inline-block;
+}
+
+.prediction-canvas {
+    width: 100px;
+}
+
+.pred {
+    font-size: 20px;
+    line-height: 25px;
+    width: 100px;
+}
+
+.pred-correct {
+    background-color: #00cf00;
+    color: #ffffff;
+    /* Change text color to white */
+}
+
+.pred-incorrect {
+    background-color: red;
+    color: #ffffff;
+    /* Change text color to white */
+}
+
+.pred-container {
+    display: inline-block;
+    width: 100px;
+    margin: 10px;
+}
+
+/* Define the flexbox layout */
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.child {
+    flex: 0 0 auto;
+    /* Adjust flex properties as per your layout requirements */
+    margin: 5px;
+    /* Adjust margins as per your design */
+}
+
+.gauge-container {
+    position: absolute;
+    width: 200px;
+    /* Adjust the width of the gauge container */
+    height: 100px;
+    /* Adjust the height of the gauge container */
+}
+
+.gauge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Adjust the border size and color */
+    background-image: conic-gradient(from 270deg, red 0deg, yellow 90deg, green 180deg);
+    background-position: center bottom -100px;
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+    /* Example background color */
+    border-top-left-radius: 100px;
+    /* Half of the width */
+    border-top-right-radius: 100px;
+    /* Half of the width */
+    border: 1px solid rgb(255, 255, 255);
+    
+}
+
+.labels {
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    width: 20px; /* Adjust according to your label size */
+    height: 20px; /* Adjust according to your label size */
+    text-align: center;
+    /* Other label styles */
+}
+
+.label:nth-child(1) {
+    top: 100px;
+    left: -10px; 
+}
+
+.label:nth-child(2) {
+    top: 10px;
+    left: calc(25%+10px); 
+}
+
+.label:nth-child(3) {
+    top: -20px;
+    left: 90px; 
+}
+
+.label:nth-child(4) {
+    top: 10px;
+    left: 85%; 
+}
+
+.label:nth-child(5) {
+    top: 100px;
+    left: 100%; 
+}
+
+
+.needle {
+    /* Your needle styles */
+    width: 1.5px;
+    /* Example width */
+    height: 100px;
+    /* Example height */
+    background-color: red;
+    border: 0.5px solid black;
+    /* Example color */
+    position: absolute;
+    top: 0%;
+    /* Position it vertically centered */
+    left: 50%;
+    /* Position it horizontally centered */
+
+    transform-origin: center bottom;
+    /* Rotate around the bottom center */
+}
